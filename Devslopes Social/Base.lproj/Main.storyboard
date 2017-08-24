@@ -62,13 +62,13 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="0am-6R-WEJ">
                                 <rect key="frame" x="41" y="200" width="238" height="114"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Staff Number..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UDS-RY-Ott" customClass="FancyTextField" customModule="Devslopes_Social" customModuleProvider="target">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email Address..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UDS-RY-Ott" customClass="FancyTextField" customModule="Devslopes_Social" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="238" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="cNZ-py-TMP"/>
                                         </constraints>
                                         <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="15"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BWF-2l-iVg" customClass="FancyTextField" customModule="Devslopes_Social" customModuleProvider="target">
@@ -77,8 +77,8 @@
                                             <constraint firstAttribute="height" constant="30" id="Tg3-px-u0T"/>
                                         </constraints>
                                         <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="15"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q12-yn-oy4" customClass="FancySignInBtn" customModule="Devslopes_Social" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="84" width="238" height="30"/>
@@ -90,6 +90,9 @@
                                         <state key="normal" title="Sign In">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="signInTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="huD-se-UXG"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -107,6 +110,10 @@
                             <constraint firstAttribute="trailing" secondItem="3yY-K2-3Wd" secondAttribute="trailing" id="fns-eu-FzV"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailField" destination="UDS-RY-Ott" id="hM1-mH-GGk"/>
+                        <outlet property="pwordField" destination="BWF-2l-iVg" id="HVd-zX-itU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
